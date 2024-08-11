@@ -1,5 +1,6 @@
 import 'package:eapp/admin/admin_homepage.dart';
 import 'package:eapp/auth/login_or_register.dart';
+import 'package:eapp/pages/bottom_bar.dart';
 import 'package:eapp/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -24,7 +25,7 @@ class _AuthPageState extends State<AuthPage> {
         // user is logged in
         if (snapshot.hasData) {
           if (snapshot.data?.email == "admin@gmail.com") return AdminHomePage();
-          return HomePage();
+          return BottomNav();
         }
 
         // user is not logged in

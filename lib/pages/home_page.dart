@@ -1,5 +1,3 @@
-import 'package:eapp/components/text_field.dart';
-import 'package:eapp/styles/app_textstyles.dart';
 import 'package:eapp/styles/styles.dart';
 import 'package:eapp/widgets/catagory_widget.dart';
 import 'package:eapp/widgets/teacher_widget.dart';
@@ -40,15 +38,12 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Container(
-                      height: 70,
-                      width: 70,
-                      decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(20)),
-                    ),
-                  )
+                      borderRadius: BorderRadius.circular(20),
+                      child: CircleAvatar(
+                        backgroundColor: Colors.white,
+                        backgroundImage:
+                            AssetImage("assets/images/teachers/kranthi.webp"),
+                      ))
                 ],
               ),
               // SizedBox(
@@ -68,12 +63,33 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
               ),
               Container(
-                height: 150,
-                width: double.infinity,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.grey[500]),
+                  borderRadius: BorderRadius.circular(15),
+                  color: Colors.orangeAccent,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Text("Edodwaja,\nThe Real Education"),
+                      SizedBox(
+                        width: 22,
+                      ),
+                      Container(
+                        height: 150,
+                        width: 200,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              image: AssetImage("assets/images/banner.png"),
+                              fit: BoxFit.cover),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
+
               SizedBox(
                 height: 10,
               ),
@@ -113,7 +129,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 10,
               ),
-              // TeacherWidget(),
+              TeacherWidget(),
             ],
           ),
         ),

@@ -12,27 +12,191 @@ class TeacherWidget extends StatefulWidget {
 class _TeacherWidgetState extends State<TeacherWidget> {
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        shrinkWrap: true,
-        scrollDirection: Axis.vertical,
-        itemCount: teachers.length,
-        itemBuilder: (context, index) {
-          final Teacher = teachers[index];
-          return ListTile(
-            leading: Column(
-              children: [
-                CircleAvatar(
-                  backgroundColor: Colors.white,
-                  radius: 28,
-                  backgroundImage: AssetImage(Teacher.url),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          //first teacher
+          Column(
+            children: [
+              Card(
+                elevation: 7,
+                child: Container(
+                  height: 170,
+                  width: 130,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    children: [
+                      Card(
+                        color: Colors.amber,
+                        child: Container(
+                          height: 110,
+                          width: 130,
+                          decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      "assets/images/teachers/kranthi.webp"))),
+                        ),
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Sukruth",
+                            style: BoldHeading.nameOfTextStyle,
+                          ),
+                          Text(
+                            "Flutter",
+                            style: LightText.nameOfTextStyle,
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
-                Text(
-                  Teacher.username,
-                  style: BoldText.nameOfTextStyle,
-                )
-              ],
-            ),
-          );
-        });
+              ),
+            ],
+          ),
+
+          //second teacher
+          Column(
+            children: [
+              Card(
+                elevation: 7,
+                child: Container(
+                  height: 170,
+                  width: 130,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    children: [
+                      Card(
+                        color: Colors.amber,
+                        child: Container(
+                          height: 110,
+                          width: 130,
+                          decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      "assets/images/teachers/har.webp"))),
+                        ),
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Madhulash",
+                            style: BoldHeading.nameOfTextStyle,
+                          ),
+                          Text(
+                            "Robotics",
+                            style: LightText.nameOfTextStyle,
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          //3rd teacher
+          Column(
+            children: [
+              Card(
+                elevation: 7,
+                child: Container(
+                  height: 170,
+                  width: 130,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    children: [
+                      Card(
+                        color: Colors.amber,
+                        child: Container(
+                          height: 110,
+                          width: 130,
+                          decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      "assets/images/teachers/harshi.webp"))),
+                        ),
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Surabhi",
+                            style: BoldHeading.nameOfTextStyle,
+                          ),
+                          Text(
+                            "Devops",
+                            style: LightText.nameOfTextStyle,
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+
+          //4th teacher
+          Column(
+            children: [
+              Card(
+                elevation: 7,
+                child: Container(
+                  height: 170,
+                  width: 130,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    children: [
+                      Card(
+                        color: Colors.amber,
+                        child: Container(
+                          height: 110,
+                          width: 130,
+                          decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                      "assets/images/teachers/papa.webp"))),
+                        ),
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Varshini",
+                            style: BoldHeading.nameOfTextStyle,
+                          ),
+                          Text(
+                            "Design",
+                            style: LightText.nameOfTextStyle,
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
+    );
   }
 }

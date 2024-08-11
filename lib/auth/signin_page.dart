@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SignInPage extends StatefulWidget {
   final Function()? onTap;
@@ -76,7 +77,7 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kBackgroundColor,
+        backgroundColor: Colors.white,
         elevation: 0,
         // leading: IconButton(
         //   onPressed: () {
@@ -97,9 +98,9 @@ class _SignInPageState extends State<SignInPage> {
             SliverFillRemaining(
               hasScrollBody: false,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
+                  // mainAxisSize: MainAxisSize.min,
                   children: [
                     Flexible(
                       fit: FlexFit.loose,
@@ -108,14 +109,20 @@ class _SignInPageState extends State<SignInPage> {
                         children: [
                           Text(
                             "Welcome back.",
-                            style: kHeadline,
+                            style: GoogleFonts.poppins(
+                                fontSize: 40,
+                                color: Colors.amberAccent,
+                                fontWeight: FontWeight.w700),
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 7,
                           ),
                           Text(
                             "You've been missed!",
-                            style: kBodyText2,
+                            style: GoogleFonts.poppins(
+                                fontSize: 20,
+                                color: Colors.amberAccent,
+                                fontWeight: FontWeight.w700),
                           ),
                           SizedBox(
                             height: 60,
@@ -145,7 +152,7 @@ class _SignInPageState extends State<SignInPage> {
                           child: const Text(
                             'Register now',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.blue,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

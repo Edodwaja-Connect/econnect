@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:eapp/pages/course_page.dart';
+import 'package:eapp/pages/detail_page.dart';
 import 'package:eapp/pages/home_page.dart';
 import 'package:eapp/pages/profile_page.dart';
 import 'package:flutter/material.dart';
@@ -15,15 +16,15 @@ class _BottomNavState extends State<BottomNav> {
   late List<Widget> pages;
   late HomePage homePage;
   late CoursePage course;
-  late ProfilePage profile;
+  late DetailPage detail;
   int currentTabIndex = 0;
 
   @override
   void initState() {
     homePage = HomePage();
     course = CoursePage();
-    profile = ProfilePage();
-    pages = [homePage, course, profile];
+    detail = DetailPage();
+    pages = [homePage, course, detail];
     // TODO: implement initState
     super.initState();
   }
