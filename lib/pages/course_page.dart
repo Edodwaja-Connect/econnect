@@ -1,6 +1,7 @@
 import 'package:eapp/components/course_tile.dart';
 import 'package:eapp/models/course.dart';
 import 'package:eapp/pages/detail_page.dart';
+import 'package:eapp/pages/student_form.dart';
 import 'package:eapp/styles/styles.dart';
 
 import 'package:flutter/material.dart';
@@ -78,7 +79,7 @@ class CoursePage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => DetailPage(),
+                                builder: (context) => ProfileForm(),
                               ),
                             );
                           },

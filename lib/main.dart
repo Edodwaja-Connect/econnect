@@ -1,9 +1,14 @@
-import 'package:eapp/auth/auth.dart';
+import 'package:eapp/admin/admin_homepage.dart';
 import 'package:eapp/firebase_options.dart';
 import 'package:eapp/models/course.dart';
+import 'package:eapp/pages/admin_homepage.dart';
 import 'package:eapp/pages/bottom_bar.dart';
-import 'package:eapp/pages/cart_page.dart';
-import 'package:eapp/pages/course_page.dart';
+import 'package:eapp/pages/course_managementpage.dart';
+import 'package:eapp/pages/student_form.dart';
+import 'package:eapp/signin/login_page.dart';
+import 'package:eapp/signin/register_page.dart';
+import 'package:eapp/signin/student_dash.dart';
+import 'package:eapp/signin/tutor_dash.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -33,11 +38,20 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       themeMode: ThemeMode.light,
-      home: BottomNav(),
+      initialRoute: '/login',
       routes: {
-        '/shop_page': (context) => CoursePage(),
-        '/cart_page': (context) => CartPage(),
+        '/adminHomepage': (context) => AdminHomepage(),
+        '/login': (context) => LoginPage(),
+        '/profileForm': (context) => ProfileForm(),
+        '/register': (context) => Register(),
+        '/studentDashboard': (context) => BottomNav(),
+        '/tutorDashboard': (context) => CourseFormPage(),
       },
+      // home: BottomNav(),
+      // routes: {
+      //   '/shop_page': (context) => CoursePage(),
+      //   '/cart_page': (context) => CartPage(),
+      // },
     );
   }
 }

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class CourseTile extends StatelessWidget {
-  final Course course;
+  final Coursee course;
   const CourseTile({super.key, required this.course});
 
   //add to cart button

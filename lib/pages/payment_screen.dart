@@ -22,7 +22,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
       'amount': 100,
       'name': 'Edodwaja',
       'description': 'Course Robo',
-      'prefill': {'contact': '9493994613', 'email': 'sukruth321@gmail.com'}
+      'prefill': {'contact': '9010388921', 'email': 'sukruth321@gmail.com'}
     };
 
     super.initState();

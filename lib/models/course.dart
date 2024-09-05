@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Course {
+class Coursee {
   final String name;
   final double price;
   final String description;
   final String imagePath;
 
-  Course({
+  Coursee({
     required this.name,
     required this.price,
     required this.description,
@@ -16,30 +16,30 @@ class Course {
 
 class Shop extends ChangeNotifier {
   //product for sale
-  final List<Course> _shop = [
+  final List<Coursee> _shop = [
     //product 1
-    Course(
+    Coursee(
         name: "Kranthi",
         price: 130000,
         description: "Flutter developer",
         imagePath: 'assets/images/teachers/kranthi.webp'),
 
     //product 2
-    Course(
+    Coursee(
         name: "Shreya",
         price: 90,
         description: "Cloud Developer",
         imagePath: 'assets/images/teachers/papa.webp'),
 
     //product 3
-    Course(
+    Coursee(
         name: "Madulash",
         price: 2000.79,
         description: "Robotics",
         imagePath: 'assets/images/teachers/har.webp'),
 
     //product 4
-    Course(
+    Coursee(
         name: "Surabhi",
         price: 9000.97,
         description: "Web developer",
@@ -47,22 +47,22 @@ class Shop extends ChangeNotifier {
   ];
 
   //user cart
-  List<Course> _cart = [];
+  List<Coursee> _cart = [];
 
   //get product list
-  List<Course> get shop => _shop;
+  List<Coursee> get shop => _shop;
 
   //get user cart
-  List<Course> get cart => _cart;
+  List<Coursee> get cart => _cart;
 
   //add item to cart
-  void addToCart(Course item) {
+  void addToCart(Coursee item) {
     _cart.add(item);
     notifyListeners();
   }
 
   //remove item from cart
-  void removeFromCart(Course item) {
+  void removeFromCart(Coursee item) {
     _cart.remove(item);
   }
 }

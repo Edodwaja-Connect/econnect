@@ -16,15 +16,15 @@ class _BottomNavState extends State<BottomNav> {
   late List<Widget> pages;
   late HomePage homePage;
   late CoursePage course;
-  late DetailPage detail;
+  late ProfilePage profile;
   int currentTabIndex = 0;
 
   @override
   void initState() {
     homePage = HomePage();
     course = CoursePage();
-    detail = DetailPage();
-    pages = [homePage, course, detail];
+    profile = ProfilePage();
+    pages = [homePage, course, profile];
     // TODO: implement initState
     super.initState();
   }

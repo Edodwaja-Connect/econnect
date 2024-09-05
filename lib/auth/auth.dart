@@ -24,7 +24,7 @@ class _AuthPageState extends State<AuthPage> {
 
         // user is logged in
         if (snapshot.hasData) {
-          if (snapshot.data?.email == "admin@gmail.com") return AdminHomePage();
+          if (snapshot.data?.email == "admin@gmail.com") return AdminHomepage();
           return BottomNav();
         }
 
